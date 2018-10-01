@@ -4,8 +4,8 @@ all:
 	g++ Source/*.cpp -o $(OUT_FILE) -std=c++11 -Wall $(OPENGL_FLAGS)
 clean:
 	rm $(OUT_FILE) -f
-horse:
+horse: $(OUT_FILE)
 	./$(OUT_FILE) Samples/horse.xml
-mug:
+mug: $(OUT_FILE)
 	./$(OUT_FILE) Samples/horse_and_mug.xml
 
